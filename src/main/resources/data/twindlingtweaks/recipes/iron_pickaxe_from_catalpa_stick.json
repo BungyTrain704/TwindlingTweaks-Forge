@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "twindlingtweaks:catalpa_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:iron_pickaxe"
+  }
+}

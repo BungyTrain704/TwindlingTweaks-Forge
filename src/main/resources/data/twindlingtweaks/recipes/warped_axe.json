@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    "BS",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:warped_planks"
+    },
+    "S": {
+      "item": "twindlingtweaks:warped_stick"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:warped_axe"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    " S",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:mangrove_planks"
+    },
+    "S": {
+      "item": "twindlingtweaks:mangrove_stick"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:mangrove_hoe"
+  }
+}

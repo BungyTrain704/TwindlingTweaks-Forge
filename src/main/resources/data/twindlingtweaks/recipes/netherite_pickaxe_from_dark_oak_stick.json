@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "twindlingtweaks:dark_oak_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:netherite_pickaxe"
+  }
+}

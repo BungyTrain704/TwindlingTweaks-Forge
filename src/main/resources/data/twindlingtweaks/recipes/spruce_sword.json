@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "B",
+    "S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:spruce_planks"
+    },
+    "S": {
+      "item": "twindlingtweaks:spruce_stick"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:spruce_sword"
+  }
+}

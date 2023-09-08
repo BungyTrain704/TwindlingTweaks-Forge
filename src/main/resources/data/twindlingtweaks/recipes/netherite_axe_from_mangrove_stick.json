@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    "BS",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:netherite_ingot"
+    },
+    "S": {
+      "item": "twindlingtweaks:mangrove_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:netherite_axe"
+  }
+}

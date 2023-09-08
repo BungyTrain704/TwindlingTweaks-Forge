@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    " S",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:iron_ingot"
+    },
+    "S": {
+      "item": "twindlingtweaks:warped_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:iron_hoe"
+  }
+}

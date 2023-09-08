@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "###",
+    "###",
+    "###"
+  ],
+  "key": {
+    "#": {
+      "item": "twindlingtweaks:rough_sugar"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:rough_sugar_block"
+  }
+}
+

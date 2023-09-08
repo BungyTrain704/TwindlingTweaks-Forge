@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    " S",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:dark_oak_planks"
+    },
+    "S": {
+      "item": "twindlingtweaks:dark_oak_stick"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:dark_oak_hoe"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "PPP"
+  ],
+  "key": {
+    "P": {
+      "item": "minecraft:jungle_planks"
+    },
+    "W": {
+      "item": "minecraft:purple_wool"
+    }
+  },
+  "result": {
+    "item": "minecraft:purple_bed"
+  }
+}

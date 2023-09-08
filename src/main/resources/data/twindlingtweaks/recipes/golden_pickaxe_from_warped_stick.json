@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:gold_ingot"
+    },
+    "S": {
+      "item": "twindlingtweaks:warped_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:golden_pickaxe"
+  }
+}

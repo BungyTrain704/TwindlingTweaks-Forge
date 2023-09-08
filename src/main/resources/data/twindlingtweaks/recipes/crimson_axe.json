@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    "BS",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:crimson_planks"
+    },
+    "S": {
+      "item": "twindlingtweaks:crimson_stick"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:crimson_axe"
+  }
+}

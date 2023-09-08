@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BB",
+    " S",
+    " S"
+  ],
+  "key": {
+    "B": {
+      "tag": "minecraft:stone_tool_materials"
+    },
+    "S": {
+      "item": "twindlingtweaks:spruce_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:stone_hoe"
+  }
+}

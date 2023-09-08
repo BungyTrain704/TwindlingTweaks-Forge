@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BBB",
+    " S ",
+    " S "
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:acacia_planks"
+    },
+    "S": {
+      "item": "twindlingtweaks:acacia_stick"
+    }
+  },
+  "result": {
+    "item": "twindlingtweaks:acacia_pickaxe"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "B",
+    "B",
+    "S"
+  ],
+  "key": {
+    "B": {
+      "item": "minecraft:diamond"
+    },
+    "S": {
+      "item": "twindlingtweaks:catalpa_stick"
+    }
+  },
+  "result": {
+    "item": "minecraft:diamond_sword"
+  }
+}
