@@ -1,6 +1,6 @@
 {
   "type": "twindlingtweaks:ores",
   "biomes": "#minecraft:is_overworld",
-  "feature": "twindlingtweaks:mud_ore_placed",
+  "feature": "twindlingtweaks:mud_placed",
   "step": "underground_ores"
 }

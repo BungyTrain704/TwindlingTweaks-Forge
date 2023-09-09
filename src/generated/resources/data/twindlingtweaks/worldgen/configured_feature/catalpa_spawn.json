@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:random_selector",
+  "config": {
+    "default": "twindlingtweaks:catalpa_checked",
+    "features": [
+      {
+        "chance": 0.5,
+        "feature": "twindlingtweaks:catalpa_checked"
+      }
+    ]
+  }
+}

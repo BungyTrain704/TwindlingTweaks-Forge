@@ -13,7 +13,8 @@ import java.util.Random;
 public class CatalpaTreeGrower extends AbstractTreeGrower {
     @Nullable
     @Override
-    protected Holder<? extends ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pLargeHive) {
-        return ModConfiguredFeatures.CATALPA.getHolder().get();
+    protected ResourceKey<ConfiguredFeature<?, ?>> getConfiguredFeature(RandomSource pRandom, boolean pHasFlowers) {
+        return ModConfiguredFeatures.CATALPA_KEY;
     }
 }
+
