@@ -2,7 +2,6 @@ package com.bungy.twindlingtweaks.block.entity;
 
 import com.bungy.twindlingtweaks.TwindlingTweaks;
 import com.bungy.twindlingtweaks.block.ModBlocks;
-import com.bungy.twindlingtweaks.block.custom.BigCraftingTableBlock;
 import com.bungy.twindlingtweaks.block.entity.custom.ObsidianForgerBlockEntity;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;

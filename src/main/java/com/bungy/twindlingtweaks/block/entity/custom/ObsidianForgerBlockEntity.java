@@ -2,7 +2,6 @@ package com.bungy.twindlingtweaks.block.entity.custom;
 
 
 import com.bungy.twindlingtweaks.block.entity.ModBlockEntities;
-import com.bungy.twindlingtweaks.item.ModItems;
 import com.bungy.twindlingtweaks.recipes.ObsidianForgerRecipe;
 import com.bungy.twindlingtweaks.screen.ObsidianForgerMenu;
 import net.minecraft.core.BlockPos;
@@ -19,12 +18,12 @@ import net.minecraft.world.inventory.ContainerData;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraftforge.common.capabilities.Capability;
+import net.minecraftforge.common.capabilities.CapabilityProvider;
+import net.minecraftforge.common.capabilities.ForgeCapabilities;
 import net.minecraftforge.common.util.LazyOptional;
-import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 import org.jetbrains.annotations.NotNull;
@@ -32,7 +31,6 @@ import org.jetbrains.annotations.NotNull;
 import javax.annotation.Nonnull;
 import javax.annotation.Nullable;
 import java.util.Optional;
-import java.util.Random;
 
 public class ObsidianForgerBlockEntity extends BlockEntity implements MenuProvider {
     private final ItemStackHandler itemHandler = new ItemStackHandler(4) {
@@ -86,7 +84,7 @@ public class ObsidianForgerBlockEntity extends BlockEntity implements MenuProvid
     @Nonnull
     @Override
     public <T> LazyOptional<T> getCapability(@Nonnull Capability<T> cap, @javax.annotation.Nullable Direction side) {
-        if (cap == CapabilityItemHandler.ITEM_HANDLER_CAPABILITY) {
+        if (cap == ForgeCapabilities.ITEM_HANDLER) {
             return lazyItemHandler.cast();
         }
 

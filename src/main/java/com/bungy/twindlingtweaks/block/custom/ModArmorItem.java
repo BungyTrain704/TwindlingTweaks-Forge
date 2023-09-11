@@ -18,10 +18,11 @@ public class ModArmorItem extends ArmorItem {
                     .put(ModArmorMaterials.ALLUMINITE,
                             new MobEffectInstance(MobEffects.NIGHT_VISION, 200, 1)).build();
 
-
-    public ModArmorItem(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
-        super(material, slot, settings);
+    public ModArmorItem(ArmorMaterial material, Type type, Properties settings) {
+        super(material, type, settings);
     }
+
+
 
     @Override
     public void onArmorTick(ItemStack stack, Level world, Player player) {

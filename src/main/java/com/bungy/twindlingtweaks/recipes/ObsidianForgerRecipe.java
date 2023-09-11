@@ -4,6 +4,7 @@ import com.bungy.twindlingtweaks.TwindlingTweaks;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import net.minecraft.core.NonNullList;
+import net.minecraft.core.RegistryAccess;
 import net.minecraft.network.FriendlyByteBuf;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
@@ -35,15 +36,15 @@ public class ObsidianForgerRecipe implements Recipe<SimpleContainer> {
         return recipeItems.get(0).test(pContainer.getItem(2));
     }
 
+    @Override
+    public ItemStack assemble(SimpleContainer p_44001_, RegistryAccess p_267165_) {
+        return output;
+    }
+
 
     @Override
     public NonNullList<Ingredient> getIngredients() {
         return recipeItems;
-    }
-
-    @Override
-    public ItemStack assemble(SimpleContainer pContainer) {
-        return output;
     }
 
     @Override
@@ -52,7 +53,7 @@ public class ObsidianForgerRecipe implements Recipe<SimpleContainer> {
     }
 
     @Override
-    public ItemStack getResultItem() {
+    public ItemStack getResultItem(RegistryAccess p_267052_) {
         return output.copy();
     }
 
@@ -69,6 +70,10 @@ public class ObsidianForgerRecipe implements Recipe<SimpleContainer> {
     @Override
     public RecipeType<?> getType() {
         return Type.INSTANCE;
+    }
+
+    public ItemStack getResultItem() {
+        return output.copy();
     }
 
     public static class Type implements RecipeType<ObsidianForgerRecipe> {

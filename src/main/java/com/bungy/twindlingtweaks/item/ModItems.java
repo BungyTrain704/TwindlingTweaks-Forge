@@ -236,31 +236,31 @@ public class ModItems {
                     new Item.Properties()));
 
     public static final RegistryObject<Item> ALLUMINITE_HELMET = ITEMS.register("alluminite_helmet",
-            () -> new ModArmorItem(ModArmorMaterials.ALLUMINITE, EquipmentSlot.HEAD,
+            () -> new ModArmorItem(ModArmorMaterials.ALLUMINITE, ArmorItem.Type.HELMET,
                     new Item.Properties()));
     public static final RegistryObject<Item> ALLUMINITE_CHESTPLATE = ITEMS.register("alluminite_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.ALLUMINITE, EquipmentSlot.CHEST,
+            () -> new ArmorItem(ModArmorMaterials.ALLUMINITE, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
     public static final RegistryObject<Item> ALLUMINITE_LEGGINGS = ITEMS.register("alluminite_leggings",
-            () -> new ArmorItem(ModArmorMaterials.ALLUMINITE, EquipmentSlot.LEGS,
+            () -> new ArmorItem(ModArmorMaterials.ALLUMINITE, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
     public static final RegistryObject<Item> ALLUMINITE_BOOTS = ITEMS.register("alluminite_boots",
-            () -> new ArmorItem(ModArmorMaterials.ALLUMINITE, EquipmentSlot.FEET,
+            () -> new ArmorItem(ModArmorMaterials.ALLUMINITE, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
 
 
     public static final RegistryObject<Item> OBSIDIAN_HELMET = ITEMS.register("obsidian_helmet",
-            () -> new ModArmorItem2(ModArmorMaterials.OBSIDIAN, EquipmentSlot.HEAD,
+            () -> new ModArmorItem2(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.HELMET,
                     new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_CHESTPLATE = ITEMS.register("obsidian_chestplate",
-            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, EquipmentSlot.CHEST,
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.CHESTPLATE,
                     new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_LEGGINGS = ITEMS.register("obsidian_leggings",
-            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, EquipmentSlot.LEGS,
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.LEGGINGS,
                     new Item.Properties()));
     public static final RegistryObject<Item> OBSIDIAN_BOOTS = ITEMS.register("obsidian_boots",
-            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, EquipmentSlot.FEET,
+            () -> new ArmorItem(ModArmorMaterials.OBSIDIAN, ArmorItem.Type.BOOTS,
                     new Item.Properties()));
 
 

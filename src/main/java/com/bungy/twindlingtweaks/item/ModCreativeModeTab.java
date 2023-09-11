@@ -2,22 +2,170 @@ package com.bungy.twindlingtweaks.item;
 
 import com.bungy.twindlingtweaks.TwindlingTweaks;
 import com.bungy.twindlingtweaks.block.ModBlocks;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
-import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
-import net.minecraftforge.event.CreativeModeTabEvent;
-import net.minecraftforge.eventbus.api.SubscribeEvent;
-import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.eventbus.api.IEventBus;
+import net.minecraftforge.registries.DeferredRegister;
+import net.minecraftforge.registries.RegistryObject;
 
-@Mod.EventBusSubscriber(modid = TwindlingTweaks.MOD_ID, bus = Mod.EventBusSubscriber.Bus.MOD)
 public class ModCreativeModeTab {
-    public static CreativeModeTab TWINDLING_TWEAKS;
+    public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS =
+            DeferredRegister.create(Registries.CREATIVE_MODE_TAB, TwindlingTweaks.MOD_ID);
 
-    @SubscribeEvent
-    public static void registerCreativeModeTabs(CreativeModeTabEvent.Register event) {
-        TWINDLING_TWEAKS = event.registerCreativeModeTab(new ResourceLocation(TwindlingTweaks.MOD_ID, "twindling_tweaks"),
-                builder -> builder.icon(() -> new ItemStack(ModBlocks.ALLUMINITE_BLOCK.get())).title(Component.literal("Twindling Tweaks")).build());
+    public static final RegistryObject<CreativeModeTab> TWINDLING_TWEAKS = CREATIVE_MODE_TABS.register("twindling_tweaks",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RAW_ALLUMINITE.get()))
+                    .title(Component.literal("Twindling Tweaks"))
+                    .displayItems((pParameters, pOutput) -> {
+                                pOutput.accept(ModItems.MUD_BALL.get());
+                                pOutput.accept(ModItems.DRIED_MUD_BALL.get());
+                                pOutput.accept(ModItems.RAW_ALLUMINITE.get());
+                                pOutput.accept(ModItems.ALLUMINITE_INGOT.get());
+                                pOutput.accept(ModItems.ALLUMINITE_NUGGET.get());
+                                pOutput.accept(ModItems.REINFORCED_ALLUMINITE_INGOT.get());
+                                pOutput.accept(ModItems.BIRCH_SWORD.get());
+                                pOutput.accept(ModItems.BIRCH_AXE.get());
+                                pOutput.accept(ModItems.BIRCH_PICKAXE.get());
+                                pOutput.accept(ModItems.BIRCH_SHOVEL.get());
+                                pOutput.accept(ModItems.BIRCH_HOE.get());
+                                pOutput.accept(ModItems.BIRCH_STICK.get());
+                                pOutput.accept(ModItems.SPRUCE_SWORD.get());
+                                pOutput.accept(ModItems.SPRUCE_AXE.get());
+                                pOutput.accept(ModItems.SPRUCE_PICKAXE.get());
+                                pOutput.accept(ModItems.SPRUCE_SHOVEL.get());
+                                pOutput.accept(ModItems.SPRUCE_HOE.get());
+                                pOutput.accept(ModItems.SPRUCE_STICK.get());
+                                pOutput.accept(ModItems.JUNGLE_SWORD.get());
+                                pOutput.accept(ModItems.JUNGLE_AXE.get());
+                                pOutput.accept(ModItems.JUNGLE_PICKAXE.get());
+                                pOutput.accept(ModItems.JUNGLE_SHOVEL.get());
+                                pOutput.accept(ModItems.JUNGLE_HOE.get());
+                                pOutput.accept(ModItems.JUNGLE_STICK.get());
+                                pOutput.accept(ModItems.DARK_OAK_SWORD.get());
+                                pOutput.accept(ModItems.DARK_OAK_AXE.get());
+                                pOutput.accept(ModItems.DARK_OAK_PICKAXE.get());
+                                pOutput.accept(ModItems.DARK_OAK_SHOVEL.get());
+                                pOutput.accept(ModItems.DARK_OAK_HOE.get());
+                                pOutput.accept(ModItems.DARK_OAK_STICK.get());
+                                pOutput.accept(ModItems.ACACIA_SWORD.get());
+                                pOutput.accept(ModItems.ACACIA_AXE.get());
+                                pOutput.accept(ModItems.ACACIA_PICKAXE.get());
+                                pOutput.accept(ModItems.ACACIA_SHOVEL.get());
+                                pOutput.accept(ModItems.ACACIA_HOE.get());
+                                pOutput.accept(ModItems.ACACIA_STICK.get());
+                                pOutput.accept(ModItems.MANGROVE_SWORD.get());
+                                pOutput.accept(ModItems.MANGROVE_AXE.get());
+                                pOutput.accept(ModItems.MANGROVE_PICKAXE.get());
+                                pOutput.accept(ModItems.MANGROVE_SHOVEL.get());
+                                pOutput.accept(ModItems.MANGROVE_HOE.get());
+                                pOutput.accept(ModItems.MANGROVE_STICK.get());
+                                pOutput.accept(ModItems.WARPED_SWORD.get());
+                                pOutput.accept(ModItems.WARPED_AXE.get());
+                                pOutput.accept(ModItems.WARPED_PICKAXE.get());
+                                pOutput.accept(ModItems.WARPED_SHOVEL.get());
+                                pOutput.accept(ModItems.WARPED_HOE.get());
+                                pOutput.accept(ModItems.WARPED_STICK.get());
+                                pOutput.accept(ModItems.CRIMSON_SWORD.get());
+                                pOutput.accept(ModItems.CRIMSON_AXE.get());
+                                pOutput.accept(ModItems.CRIMSON_PICKAXE.get());
+                                pOutput.accept(ModItems.CRIMSON_SHOVEL.get());
+                                pOutput.accept(ModItems.CRIMSON_HOE.get());
+                                pOutput.accept(ModItems.CRIMSON_STICK.get());
+                                pOutput.accept(ModItems.CATALPA_SWORD.get());
+                                pOutput.accept(ModItems.CATALPA_AXE.get());
+                                pOutput.accept(ModItems.CATALPA_PICKAXE.get());
+                                pOutput.accept(ModItems.CATALPA_SHOVEL.get());
+                                pOutput.accept(ModItems.CATALPA_HOE.get());
+                                pOutput.accept(ModItems.CATALPA_STICK.get());
+                                pOutput.accept(ModItems.RED_MAPLE_SWORD.get());
+                                pOutput.accept(ModItems.RED_MAPLE_AXE.get());
+                                pOutput.accept(ModItems.RED_MAPLE_PICKAXE.get());
+                                pOutput.accept(ModItems.RED_MAPLE_SHOVEL.get());
+                                pOutput.accept(ModItems.RED_MAPLE_HOE.get());
+                                pOutput.accept(ModItems.RED_MAPLE_STICK.get());
+                                pOutput.accept(ModItems.ALLUMINITE_SWORD.get());
+                                pOutput.accept(ModItems.ALLUMINITE_AXE.get());
+                                pOutput.accept(ModItems.ALLUMINITE_PICKAXE.get());
+                                pOutput.accept(ModItems.ALLUMINITE_SHOVEL.get());
+                                pOutput.accept(ModItems.ALLUMINITE_HOE.get());
+                                pOutput.accept(ModItems.ALLUMINITE_ROD.get());
+                                pOutput.accept(ModItems.ALLUMINITE_ROD_SHARD.get());
+                                pOutput.accept(ModItems.ALLUMINITE_HELMET.get());
+                                pOutput.accept(ModItems.ALLUMINITE_CHESTPLATE.get());
+                                pOutput.accept(ModItems.ALLUMINITE_LEGGINGS.get());
+                                pOutput.accept(ModItems.ALLUMINITE_BOOTS.get());
+                                pOutput.accept(ModItems.OBSIDIAN_HELMET.get());
+                                pOutput.accept(ModItems.OBSIDIAN_CHESTPLATE.get());
+                                pOutput.accept(ModItems.OBSIDIAN_LEGGINGS.get());
+                                pOutput.accept(ModItems.OBSIDIAN_BOOTS.get());
+                                pOutput.accept(ModItems.OBSIDIAN_SWORD.get());
+                                pOutput.accept(ModItems.OBSIDIAN_AXE.get());
+                                pOutput.accept(ModItems.OBSIDIAN_PICKAXE.get());
+                                pOutput.accept(ModItems.OBSIDIAN_SHOVEL.get());
+                                pOutput.accept(ModItems.OBSIDIAN_HOE.get());
+                                pOutput.accept(ModItems.ROUGH_SUGAR.get());
+                                pOutput.accept(ModItems.SALAD_TOPPINGS.get());
+                                pOutput.accept(ModItems.SALAD.get());
+                                pOutput.accept(ModItems.RANCH_BOTTLE.get());
+                                pOutput.accept(ModItems.CROUTON.get());
+                                pOutput.accept(ModItems.CUCUMBER.get());
+                                pOutput.accept(ModItems.LETTUCE.get());
+                                pOutput.accept(ModItems.TOMATO.get());
+                                pOutput.accept(ModItems.CUCUMBER_SEEDS.get());
+                                pOutput.accept(ModItems.LETTUCE_SEEDS.get());
+                                pOutput.accept(ModItems.TOMATO_SEEDS.get());
+                                    pOutput.accept(ModBlocks.MUD_BLOCK.get());
+                                    pOutput.accept(ModBlocks.DRIED_MUD_BLOCK.get());
+                                    pOutput.accept(ModBlocks.MUD_DOOR.get());
+                                    pOutput.accept(ModBlocks.MUD_TRAPDOOR.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_LOG.get());
+                                    pOutput.accept(ModBlocks.STRIPPED_RED_MAPLE_LOG.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_WOOD.get());
+                                    pOutput.accept(ModBlocks.STRIPPED_RED_MAPLE_WOOD.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_PLANKS.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_LEAVES.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_SAPLING.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_STAiRS.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_SLAB.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_DOOR.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_TRAPDOOR.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_BUTTON.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_PRESSURE_PLATE.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_FENCE.get());
+                                    pOutput.accept(ModBlocks.RED_MAPLE_FENCE_GATE.get());
+                                    pOutput.accept(ModBlocks.CATALPA_LOG.get());
+                                    pOutput.accept(ModBlocks.STRIPPED_CATALPA_LOG.get());
+                                    pOutput.accept(ModBlocks.CATALPA_WOOD.get());
+                                    pOutput.accept(ModBlocks.STRIPPED_CATALPA_WOOD.get());
+                                    pOutput.accept(ModBlocks.CATALPA_PLANKS.get());
+                                    pOutput.accept(ModBlocks.CATALPA_LEAVES.get());
+                                    pOutput.accept(ModBlocks.CATALPA_SAPLING.get());
+                                    pOutput.accept(ModBlocks.CATALPA_STAiRS.get());
+                                    pOutput.accept(ModBlocks.CATALPA_SLAB.get());
+                                    pOutput.accept(ModBlocks.CATALPA_DOOR.get());
+                                    pOutput.accept(ModBlocks.CATALPA_TRAPDOOR.get());
+                                    pOutput.accept(ModBlocks.CATALPA_BUTTON.get());
+                                    pOutput.accept(ModBlocks.CATALPA_PRESSURE_PLATE.get());
+                                    pOutput.accept(ModBlocks.CATALPA_FENCE.get());
+                                    pOutput.accept(ModBlocks.CATALPA_FENCE_GATE.get());
+                                    pOutput.accept(ModBlocks.REINFORCED_OBSIDIAN.get());
+                                    pOutput.accept(ModBlocks.OBSIDIAN_FORGER.get());
+                                    pOutput.accept(ModBlocks.ROUGH_SUGAR_BLOCK.get());
+                                    pOutput.accept(ModBlocks.SUGAR_BLOCK.get());
+                                    pOutput.accept(ModBlocks.ALLUMINITE_BLOCK.get());
+                                    pOutput.accept(ModBlocks.RAW_ALLUMINITE_BLOCK.get());
+                                    pOutput.accept(ModBlocks.MUD_ORE.get());
+                                    pOutput.accept(ModBlocks.DEEPSLATE_MUD_ORE.get());
+                                    pOutput.accept(ModBlocks.SUGAR_ORE.get());
+                                    pOutput.accept(ModBlocks.DEEPSLATE_SUGAR_ORE.get());
+                                    pOutput.accept(ModBlocks.ALLUMINITE_ORE.get());
+                                    pOutput.accept(ModBlocks.DEEPSLATE_ALLUMINITE_ORE.get());
+                    })
+                    .build());
+
+
+    public static void register(IEventBus eventBus) {
+        CREATIVE_MODE_TABS.register(eventBus);
     }
 }

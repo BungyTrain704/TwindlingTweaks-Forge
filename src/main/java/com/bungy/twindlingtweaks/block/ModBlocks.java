@@ -5,23 +5,19 @@ import com.bungy.twindlingtweaks.block.custom.CucumberPlantBlock;
 import com.bungy.twindlingtweaks.block.custom.LettucePlantBlock;
 import com.bungy.twindlingtweaks.block.custom.ModFlammableRotatedPillarBlock;
 import com.bungy.twindlingtweaks.block.custom.ObsidianForgerBlock;
-import com.bungy.twindlingtweaks.item.ModCreativeModeTab;
 import com.bungy.twindlingtweaks.item.ModItems;
-import com.bungy.twindlingtweaks.screen.ModMenuTypes;
 import com.bungy.twindlingtweaks.world.feature.tree.CatalpaTreeGrower;
 import com.bungy.twindlingtweaks.world.feature.tree.RedMapleTreeGrower;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.item.BlockItem;
-import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
-import net.minecraft.world.level.material.Material;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
@@ -37,13 +33,13 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.SLIME_BLOCK).strength(0.5F)));
 
     public static final RegistryObject<Block> DRIED_MUD_BLOCK = registerBlock("dried_mud_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(1F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.MUD).strength(1F)));
 
     public static final RegistryObject<Block> MUD_DOOR = registerBlock("mud_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).noOcclusion().strength(1F), SoundEvents.WOODEN_DOOR_CLOSE, SoundEvents.WOODEN_DOOR_OPEN));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).noOcclusion().strength(1F), BlockSetType.OAK));
 
     public static final RegistryObject<Block> MUD_TRAPDOOR = registerBlock("mud_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.8F).noOcclusion(), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).strength(0.8F).noOcclusion(), BlockSetType.OAK));
 
     public static final RegistryObject<Block> RED_MAPLE_LOG = registerBlock("red_maple_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG).strength(1F)));
@@ -93,9 +89,9 @@ public class ModBlocks {
             () -> new SaplingBlock(new RedMapleTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> RED_MAPLE_DOOR = registerBlock("red_maple_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1F).noOcclusion(), SoundEvents.WOODEN_DOOR_CLOSE, SoundEvents.WOODEN_DOOR_OPEN));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).strength(1F).noOcclusion(), BlockSetType.OAK));
     public static final RegistryObject<Block> RED_MAPLE_TRAPDOOR = registerBlock("red_maple_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1F).noOcclusion(), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).strength(1F).noOcclusion(), BlockSetType.OAK));
 
     public static final RegistryObject<Block> RED_MAPLE_STAiRS = registerBlock("red_maple_stairs",
             () -> new StairBlock(() -> ModBlocks.RED_MAPLE_PLANKS.get().defaultBlockState(), BlockBehaviour.Properties.copy(Blocks.OAK_STAIRS)
@@ -109,9 +105,9 @@ public class ModBlocks {
     public static final RegistryObject<Block> RED_MAPLE_FENCE_GATE = registerBlock("red_maple_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE).strength(1F), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
     public static final RegistryObject<Block> RED_MAPLE_BUTTON = registerBlock("red_maple_button",
-            () -> new ButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1F).noCollission(),30, true, SoundEvents.WOODEN_BUTTON_CLICK_OFF, SoundEvents.WOODEN_BUTTON_CLICK_ON));
+            () -> new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).strength(1F).noCollission(), BlockSetType.OAK,30, true));
     public static final RegistryObject<Block> RED_MAPLE_PRESSURE_PLATE = registerBlock("red_maple_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).strength(1F), SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON ));
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).strength(1F), BlockSetType.OAK));
 
 
 
@@ -128,13 +124,13 @@ public class ModBlocks {
             () -> new FenceGateBlock(BlockBehaviour.Properties.copy(Blocks.OAK_FENCE_GATE).strength(1F), SoundEvents.FENCE_GATE_CLOSE, SoundEvents.FENCE_GATE_OPEN));
 
     public static final RegistryObject<Block> CATALPA_DOOR = registerBlock("catalpa_door",
-            () -> new DoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1F).noOcclusion(), SoundEvents.WOODEN_DOOR_CLOSE, SoundEvents.WOODEN_DOOR_OPEN));
+            () -> new DoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_DOOR).strength(1F).noOcclusion(), BlockSetType.OAK));
     public static final RegistryObject<Block> CATALPA_TRAPDOOR = registerBlock("catalpa_trapdoor",
-            () -> new TrapDoorBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1F).noOcclusion(), SoundEvents.WOODEN_TRAPDOOR_CLOSE, SoundEvents.WOODEN_TRAPDOOR_OPEN));
+            () -> new TrapDoorBlock(BlockBehaviour.Properties.copy(Blocks.OAK_TRAPDOOR).strength(1F).noOcclusion(), BlockSetType.OAK));
     public static final RegistryObject<Block> CATALPA_BUTTON = registerBlock("catalpa_button", () ->
-            new ButtonBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(1F).noCollission(),30, true, SoundEvents.WOODEN_BUTTON_CLICK_OFF, SoundEvents.WOODEN_BUTTON_CLICK_ON));
+            new ButtonBlock(BlockBehaviour.Properties.copy(Blocks.OAK_BUTTON).strength(1F).noCollission(), BlockSetType.OAK,30, true));
     public static final RegistryObject<Block> CATALPA_PRESSURE_PLATE = registerBlock("catalpa_pressure_plate",
-            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.of(Material.WOOD).strength(1F), SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_OFF, SoundEvents.WOODEN_PRESSURE_PLATE_CLICK_ON ));
+            () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING, BlockBehaviour.Properties.copy(Blocks.OAK_PRESSURE_PLATE).strength(1F), BlockSetType.OAK));
 
 
     public static final RegistryObject<Block> CATALPA_LOG = registerBlock("catalpa_log",
@@ -187,48 +183,48 @@ public class ModBlocks {
             () -> new SaplingBlock(new CatalpaTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)));
 
     public static final RegistryObject<Block> REINFORCED_OBSIDIAN = registerBlock("reinforced_obsidian",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(12F).explosionResistance(1200F).sound(SoundType.ANVIL)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.OBSIDIAN).strength(12F).explosionResistance(1200F).sound(SoundType.ANVIL)
                     .requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> OBSIDIAN_FORGER = registerBlock("obsidian_forger",
-            () -> new ObsidianForgerBlock(BlockBehaviour.Properties.of(Material.METAL).strength(12F).explosionResistance(1200F).sound(SoundType.ANVIL)
+            () -> new ObsidianForgerBlock(BlockBehaviour.Properties.copy(ModBlocks.REINFORCED_OBSIDIAN.get()).strength(12F).explosionResistance(1200F).sound(SoundType.ANVIL)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ROUGH_SUGAR_BLOCK = registerBlock("rough_sugar_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.5F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(0.5F)));
 
     public static final RegistryObject<Block> SUGAR_BLOCK = registerBlock("sugar_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.DIRT).strength(0.4F)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIRT).strength(0.4F)));
 
     public static final RegistryObject<Block> ALLUMINITE_BLOCK = registerBlock("alluminite_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.METAL).strength(2F).sound(SoundType.BASALT)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DIAMOND_BLOCK).strength(2F).sound(SoundType.BASALT)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> RAW_ALLUMINITE_BLOCK = registerBlock("raw_alluminite_block",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(2F).sound(SoundType.BASALT)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.RAW_GOLD_BLOCK).strength(2F).sound(SoundType.BASALT)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> MUD_ORE = registerBlock("mud_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.9F)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_MUD_ORE = registerBlock("deepslate_mud_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.1F)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.1F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> SUGAR_ORE = registerBlock("sugar_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(0.9F)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(0.9F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_SUGAR_ORE = registerBlock("deepslate_sugar_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.1F)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.1F)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> ALLUMINITE_ORE = registerBlock("alluminite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.1F).sound(SoundType.BASALT)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.1F).sound(SoundType.BASALT)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> DEEPSLATE_ALLUMINITE_ORE = registerBlock("deepslate_alluminite_ore",
-            () -> new Block(BlockBehaviour.Properties.of(Material.STONE).strength(1.8F).sound(SoundType.BASALT)
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.STONE).strength(1.8F).sound(SoundType.BASALT)
                     .requiresCorrectToolForDrops()));
 
     public static final RegistryObject<Block> CUCUMBER_SEEDS_BLOCK = registerBlockWithoutBlockItem("cucumber_seeds",

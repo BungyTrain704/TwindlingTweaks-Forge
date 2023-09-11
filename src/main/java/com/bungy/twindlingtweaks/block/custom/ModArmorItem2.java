@@ -19,8 +19,8 @@ public class ModArmorItem2 extends ArmorItem {
                             new MobEffectInstance(MobEffects.MOVEMENT_SLOWDOWN, 200, 3)).build();
 
 
-    public ModArmorItem2(ArmorMaterial material, EquipmentSlot slot, Properties settings) {
-        super(material, slot, settings);
+    public ModArmorItem2(ArmorMaterial material, Type type, Properties settings) {
+        super(material, type, settings);
     }
 
     @Override
