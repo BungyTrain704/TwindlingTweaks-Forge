@@ -4,6 +4,7 @@ import com.bungy.twindlingtweaks.TwindlingTweaks;
 import com.bungy.twindlingtweaks.block.ModBlocks;
 import com.bungy.twindlingtweaks.block.custom.ModArmorItem;
 import com.bungy.twindlingtweaks.block.custom.ModArmorItem2;
+import com.bungy.twindlingtweaks.item.custom.FuelItem;
 import net.minecraft.world.entity.EquipmentSlot;
 import net.minecraft.world.item.*;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -40,7 +41,7 @@ public class ModItems {
 
 
     public static final RegistryObject<Item> BIRCH_STICK = ITEMS.register("birch_stick",
-            () -> new Item(new Item.Properties()));
+            () -> new FuelItem(new Item.Properties(), 100));
     public static final RegistryObject<Item> BIRCH_SWORD = ITEMS.register("birch_sword",
             () -> new SwordItem(ModTiers.BIRCH,  3, -2.4F,
                     new Item.Properties()));
@@ -309,6 +310,9 @@ public class ModItems {
 
     public static final RegistryObject<Item> LETTUCE = ITEMS.register("lettuce",
             () -> new Item(new Item.Properties().food(ModFoods.LETTUCE)));
+
+    public static final RegistryObject<Item> ORANGE = ITEMS.register("orange",
+            () -> new Item(new Item.Properties().food(ModFoods.ORANGE)));
 
     public static final RegistryObject<Item> TOMATO = ITEMS.register("tomato",
             () -> new Item(new Item.Properties().food(ModFoods.TOMATO)));
